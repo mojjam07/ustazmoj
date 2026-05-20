@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الأستاذ عبد المجيد محمد جامع | مُعلّم ومُرشد إسلامي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C9922A;
+    --gold-light: #E8B84B;
+    --gold-pale: #F5E6C0;
+    --gold-deep: #8B6318;
+    --green-deep: #0D3B2E;
+    --green-mid: #1A5C44;
+    --green-soft: #2A7A5C;
+    --cream: #FAF6EE;
+    --cream-dark: #F0E8D5;
+    --text-dark: #1A1208;
+    --text-muted: #5A4A2A;
+    --text-light: #8B7355;
+    --white: #FFFFFF;
+    --border-gold: rgba(201,146,42,0.3);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Naskh Arabic', 'Amiri', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    direction: rtl;
+  }
+
+  /* ——— GEOMETRIC PATTERN SVG BACKGROUND ——— */
+  .pattern-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.045;
+  }
+
+  /* ——— NAVIGATION ——— */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 3rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(13,59,46,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,146,42,0.25);
+  }
+
+  .nav-logo {
+    font-family: 'Amiri', serif;
+    font-size: 1.25rem;
+    color: var(--gold-light);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    direction: rtl;
+  }
+
+  .nav-links a {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.78);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold-light) !important;
+    padding: 0.4rem 1.2rem;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold) !important;
+    color: var(--green-deep) !important;
+  }
+
+  /* ——— HERO ——— */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    padding-top: 72px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--green-deep) 0%, #0A2D22 60%, #061A14 100%);
+    z-index: -1;
+  }
+
+  .hero-arch {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 54%;
+    background: var(--cream);
+    clip-path: ellipse(95% 100% at 100% 50%);
+    z-index: -1;
+  }
+
+  .hero-content {
+    padding: 5rem 3rem 5rem 2rem;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-bismillah {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    margin-bottom: 1.8rem;
+    opacity: 0.9;
+    display: block;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+  }
+
+  .hero-name {
+    font-family: 'Amiri', serif;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+
+  .hero-name-en {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    direction: ltr;
+    text-align: right;
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 1.5rem 0;
+  }
+
+  .hero-bio {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.82);
+    max-width: 420px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-motto {
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold-pale);
+    margin-bottom: 2.5rem;
+    padding-right: 1rem;
+    border-right: 3px solid var(--gold);
+    direction: ltr;
+    text-align: right;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--green-deep);
+    border: none;
+    padding: 0.85rem 2rem;
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 0.85rem 2rem;
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--gold); background: rgba(201,146,42,0.1); }
+
+  /* ——— HERO IMAGE SIDE ——— */
+  .hero-image-side {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem 5rem 3rem;
+    z-index: 2;
+  }
+
+  .avatar-frame {
+    position: relative;
+    width: 320px;
+    height: 380px;
+  }
+
+  .avatar-frame::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border: 1.5px solid var(--border-gold);
+    border-radius: 4px;
+    transform: rotate(3deg);
+  }
+
+  .avatar-frame::after {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border: 1px solid rgba(201,146,42,0.12);
+    border-radius: 6px;
+    transform: rotate(-2deg);
+  }
+
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, #1A5C44 0%, #0D3B2E 100%);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-gold);
+  }
+
+  .avatar-arabesque {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: rgba(201,146,42,0.08);
+    border-bottom: 1px solid var(--border-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+  }
+
+  .avatar-icon-wrap {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(201,146,42,0.12);
+    border: 1.5px solid var(--border-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .avatar-icon-wrap svg {
+    width: 60px;
+    height: 60px;
+    fill: var(--gold);
+    opacity: 0.85;
+  }
+
+  .avatar-name-plate {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .avatar-title-plate {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    margin-top: 0.4rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.06em;
+    direction: ltr;
+  }
+
+  .upload-note {
+    position: absolute;
+    bottom: 16px;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    font-family: 'Cinzel', serif;
+    direction: ltr;
+  }
+
+  .credential-badges {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .badge {
+    background: rgba(201,146,42,0.12);
+    border: 1px solid rgba(201,146,42,0.3);
+    color: var(--gold-light);
+    padding: 0.3rem 0.85rem;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-family: 'Noto Naskh Arabic', serif;
+  }
+
+  /* ——— SECTION WRAPPER ——— */
+  .section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 4rem;
+  }
+
+  .section-light { background: var(--cream); }
+  .section-dark { background: var(--green-deep); }
+  .section-mid { background: var(--cream-dark); }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.8rem;
+    direction: ltr;
+  }
+
+  .section-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.4rem;
+    color: var(--green-deep);
+    margin-bottom: 1rem;
+  }
+
+  .section-title-light {
+    color: var(--white);
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .section-subtitle-light { color: rgba(255,255,255,0.65); }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem auto 0;
+    color: var(--gold);
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+  }
+
+  .ornament::before, .ornament::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  /* ——— SUBJECTS GRID ——— */
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .subject-card {
+    background: var(--white);
+    border: 1px solid rgba(201,146,42,0.18);
+    border-top: 3px solid var(--gold);
+    padding: 2rem 1.5rem;
+    border-radius: 2px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+  }
+
+  .subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(13,59,46,0.1);
+  }
+
+  .subject-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--green-deep), var(--green-soft));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+  }
+
+  .subject-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--gold-light);
+  }
+
+  .subject-name {
+    font-family: 'Amiri', serif;
+    font-size: 1.3rem;
+    color: var(--green-deep);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+
+  .subject-desc {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ——— ABOUT ——— */
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-text h2 {
+    font-family: 'Amiri', serif;
+    font-size: 2.2rem;
+    color: var(--green-deep);
+    margin-bottom: 1.2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+
+  .values-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .values-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--green-deep);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    background: var(--white);
+    border: 1px solid rgba(201,146,42,0.2);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  }
+
+  .stat-number {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--green-deep);
+    line-height: 1;
+    direction: ltr;
+  }
+
+  .stat-label {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+  }
+
+  /* ——— METHODOLOGY ——— */
+  .method-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .method-steps::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    right: 10%;
+    left: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    z-index: 0;
+  }
+
+  .method-step {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-number {
+    width: 64px;
+    height: 64px;
+    background: var(--green-deep);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    direction: ltr;
+  }
+
+  .step-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.15rem;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.7;
+  }
+
+  /* ——— TESTIMONIALS ——— */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    border: 1px solid rgba(201,146,42,0.18);
+    padding: 2rem;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '❝';
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-family: 'Amiri', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    opacity: 0.2;
+    line-height: 1;
+    direction: ltr;
+  }
+
+  .testimonial-text {
+    font-size: 0.92rem;
+    line-height: 1.85;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .author-avatar {
+    width: 38px;
+    height: 38px;
+    background: var(--green-mid);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    color: var(--gold-light);
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--green-deep);
+  }
+
+  .author-role {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 0.15rem;
+  }
+
+  .stars {
+    color: var(--gold);
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    direction: ltr;
+    display: block;
+  }
+
+  /* ——— CTA SECTION ——— */
+  .cta-section {
+    text-align: center;
+    padding: 7rem 4rem;
+    background: var(--green-deep);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9922A' fill-opacity='0.04'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .cta-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+
+  .cta-ayah {
+    font-family: 'Amiri', serif;
+    font-size: 1.35rem;
+    color: var(--gold-pale);
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .cta-ref {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 2.5rem;
+    direction: ltr;
+    display: block;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.08em;
+  }
+
+  .cta-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.4rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-channels {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .channel-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+
+  .channel-btn:hover { transform: translateY(-2px); }
+
+  .whatsapp-btn {
+    background: #25D366;
+    color: #fff;
+    border: none;
+  }
+
+  .email-btn {
+    background: transparent;
+    color: var(--gold-light);
+    border: 1px solid var(--gold);
+  }
+
+  .email-btn:hover { background: rgba(201,146,42,0.12); }
+
+  /* ——— FOOTER ——— */
+  footer {
+    background: #061A14;
+    padding: 2.5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(201,146,42,0.15);
+  }
+
+  .footer-name {
+    font-family: 'Amiri', serif;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+  }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+    direction: ltr;
+    font-family: 'Cinzel', serif;
+  }
+
+  .footer-motto {
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.4);
+    direction: ltr;
+  }
+
+  /* ——— ANIMATIONS ——— */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * {
+    animation: fadeUp 0.7s ease backwards;
+  }
+
+  .hero-bismillah { animation-delay: 0.1s; }
+  .hero-eyebrow { animation-delay: 0.2s; }
+  .hero-name { animation-delay: 0.3s; }
+  .hero-name-en { animation-delay: 0.35s; }
+  .hero-divider { animation-delay: 0.4s; }
+  .hero-bio { animation-delay: 0.45s; }
+  .hero-motto { animation-delay: 0.5s; }
+  .hero-buttons { animation-delay: 0.55s; }
+
+  .hero-image-side {
+    animation: fadeUp 0.7s 0.4s ease backwards;
+  }
+
+  /* ——— SCROLL REVEAL ——— */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ——— ARABIC DECORATIVE BORDER ——— */
+  .gold-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+    border: none;
+  }
+
+  /* ——— RESPONSIVE ——— */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { gap: 1.2rem; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-arch { display: none; }
+    .hero-content { padding: 3rem 1.5rem 1rem; }
+    .hero-name { font-size: 2.2rem; }
+    .hero-image-side { padding: 1rem 1.5rem 3rem; }
+    .subjects-grid { grid-template-columns: 1fr 1fr; }
+    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .method-steps { grid-template-columns: 1fr 1fr; }
+    .method-steps::before { display: none; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .section { padding: 4rem 1.5rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Geometric arabesque pattern background -->
+<svg class="pattern-bg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <pattern id="arabesque" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <polygon points="40,2 78,22 78,58 40,78 2,58 2,22" fill="none" stroke="#C9922A" stroke-width="0.8"/>
+      <polygon points="40,16 66,30 66,50 40,64 14,50 14,30" fill="none" stroke="#C9922A" stroke-width="0.4"/>
+      <circle cx="40" cy="40" r="6" fill="none" stroke="#C9922A" stroke-width="0.6"/>
+      <line x1="40" y1="2" x2="40" y2="16" stroke="#C9922A" stroke-width="0.5"/>
+      <line x1="78" y1="22" x2="66" y2="30" stroke="#C9922A" stroke-width="0.5"/>
+      <line x1="78" y1="58" x2="66" y2="50" stroke="#C9922A" stroke-width="0.5"/>
+      <line x1="40" y1="78" x2="40" y2="64" stroke="#C9922A" stroke-width="0.5"/>
+      <line x1="2" y1="58" x2="14" y2="50" stroke="#C9922A" stroke-width="0.5"/>
+      <line x1="2" y1="22" x2="14" y2="30" stroke="#C9922A" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#arabesque)"/>
+</svg>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">الأستاذ عبد المجيد</div>
+  <ul class="nav-links">
+    <li><a href="#subjects">المواد</a></li>
+    <li><a href="#about">عن الأستاذ</a></li>
+    <li><a href="#methodology">المنهج</a></li>
+    <li><a href="#testimonials">الشهادات</a></li>
+    <li><a href="#contact" class="nav-cta">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-arch"></div>
+
+  <div class="hero-content">
+    <span class="hero-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span>
+    <span class="hero-eyebrow">Islamic & Arabic Education</span>
+    <h1 class="hero-name">الأستاذ<br>عبد المجيد محمد جامع</h1>
+    <p class="hero-name-en">Abdul Majid Muhammad Jami'</p>
+    <div class="hero-divider"></div>
+    <p class="hero-bio">
+      مُعلّم ومُرشد إسلامي متخصص في تعليم اللغة العربية وحفظ القرآن الكريم والحديث النبوي والفقه والتاريخ الإسلامي — بإخلاص ووضوح وفهم أصيل.
+    </p>
+    <p class="hero-motto">"Learning with Sincerity, Living with Guidance."</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">ابدأ رحلة التعلّم ←</a>
+      <a href="#subjects" class="btn-secondary">اكتشف المواد</a>
+    </div>
+  </div>
+
+  <div class="hero-image-side">
+    <div>
+      <div class="avatar-frame">
+        <div class="avatar-placeholder">
+          <div class="avatar-arabesque">✦ &nbsp; بسم الله &nbsp; ✦</div>
+          <div class="avatar-icon-wrap">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+          </div>
+          <div class="avatar-name-plate">الأستاذ عبد المجيد محمد جامع</div>
+          <div class="avatar-title-plate">Qur'an & Islamic Studies Instructor</div>
+          <div class="upload-note">[ Educator Photo Placeholder ]</div>
+        </div>
+      </div>
+      <div class="credential-badges">
+        <span class="badge">تحفيظ القرآن</span>
+        <span class="badge">الحديث والفقه</span>
+        <span class="badge">اللغة العربية</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-line">
+
+<!-- SUBJECTS -->
+<section class="section section-light" id="subjects">
+  <div class="section-header reveal">
+    <span class="section-label">Academic Disciplines</span>
+    <h2 class="section-title">المواد التي يُدرّسها</h2>
+    <p class="section-subtitle">تخصصات أكاديمية أصيلة مُقدَّمة بمنهجية واضحة وأسلوب يناسب جميع المستويات</p>
+    <div class="ornament">✦</div>
+  </div>
+
+  <div class="subjects-grid">
+    <div class="subject-card reveal">
+      <div class="subject-icon">
+        <svg viewBox="0 0 24 24"><path d="M6 2v6l2 2-2 2v6l6-3 6 3v-6l-2-2 2-2V2l-6 3-6-3z"/></svg>
+      </div>
+      <h3 class="subject-name">القرآن الكريم</h3>
+      <p class="subject-desc">تعليم الحفظ والتجويد والتدبّر بأساليب موثوقة مُستندة إلى علم الرواية</p>
+    </div>
+    <div class="subject-card reveal">
+      <div class="subject-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      </div>
+      <h3 class="subject-name">الحديث النبوي</h3>
+      <p class="subject-desc">دراسة الأحاديث الشريفة وعلوم الإسناد والمصطلح مع التطبيق العملي</p>
+    </div>
+    <div class="subject-card reveal">
+      <div class="subject-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <h3 class="subject-name">الفقه الإسلامي</h3>
+      <p class="subject-desc">الأحكام الفقهية وأصولها من المذاهب المعتبرة بلغة واضحة ومعاصرة</p>
+    </div>
+    <div class="subject-card reveal">
+      <div class="subject-icon">
+        <svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+      </div>
+      <h3 class="subject-name">اللغة العربية</h3>
+      <p class="subject-desc">النحو والصرف والبلاغة والأدب — للمبتدئين والمتقدمين من جميع الجنسيات</p>
+    </div>
+    <div class="subject-card reveal">
+      <div class="subject-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <h3 class="subject-name">التاريخ الإسلامي</h3>
+      <p class="subject-desc">سيرة النبي ﷺ والخلفاء الراشدين والحضارة الإسلامية بمنهج نقدي موثوق</p>
+    </div>
+    <div class="subject-card reveal">
+      <div class="subject-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <h3 class="subject-name">التربية الإسلامية</h3>
+      <p class="subject-desc">تزكية النفس والأخلاق الإسلامية وبناء الشخصية المؤمنة في العصر الحديث</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-mid" id="about">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <span class="section-label" style="text-align:right; display:block;">About the Educator</span>
+      <h2>من هو الأستاذ عبد المجيد؟</h2>
+      <p>
+        الأستاذ عبد المجيد محمد جامع مُعلّم إسلامي متميز يجمع بين الرسوخ العلمي الأصيل والأسلوب التربوي المعاصر، يُكرّس جهده لنشر علوم الشريعة والعربية بين المتعلمين في كل مكان.
+      </p>
+      <p>
+        يتميز بأسلوبه الهادئ والمنهجي الذي يُلائم المبتدئين والمتقدمين على حدٍّ سواء، إذ يؤمن بأن العلم الحقيقي يبدأ من الإخلاص وينتهي بالتطبيق.
+      </p>
+      <ul class="values-list">
+        <li><div class="check-icon">✓</div> إخلاص في التعليم وصدق في التوجيه</li>
+        <li><div class="check-icon">✓</div> أسلوب واضح يناسب جميع الأعمار</li>
+        <li><div class="check-icon">✓</div> متابعة فردية لكل طالب</li>
+        <li><div class="check-icon">✓</div> تعلّم رقمي منظّم وفعّال</li>
+        <li><div class="check-icon">✓</div> إسناد علمي موثوق ومتصل</li>
+      </ul>
+    </div>
+
+    <div class="about-stats reveal">
+      <div class="stat-card">
+        <div class="stat-number">١٥+</div>
+        <div class="stat-label">سنة خبرة في التدريس</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">٥٠٠+</div>
+        <div class="stat-label">طالب استفاد حتى الآن</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">٦</div>
+        <div class="stat-label">تخصصات علمية</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">١٠٠%</div>
+        <div class="stat-label">نسبة الرضا والإخلاص</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="section section-dark" id="methodology">
+  <div class="section-header reveal">
+    <span class="section-label" style="color: var(--gold)">Our Methodology</span>
+    <h2 class="section-title section-title-light">منهجية التعليم</h2>
+    <p class="section-subtitle section-subtitle-light">رحلة علمية منظّمة من الأساسيات إلى الإتقان</p>
+    <div class="ornament" style="color: var(--gold)">✦</div>
+  </div>
+
+  <div class="method-steps">
+    <div class="method-step reveal">
+      <div class="step-number">١</div>
+      <h3 class="step-title">التقييم والتشخيص</h3>
+      <p class="step-desc">تحديد المستوى الحالي للطالب ووضع خطة دراسية مخصصة</p>
+    </div>
+    <div class="method-step reveal">
+      <div class="step-number">٢</div>
+      <h3 class="step-title">التأسيس والبناء</h3>
+      <p class="step-desc">ترسيخ المفاهيم الأساسية بخطوات متسلسلة ومدروسة</p>
+    </div>
+    <div class="method-step reveal">
+      <div class="step-number">٣</div>
+      <h3 class="step-title">التطبيق والممارسة</h3>
+      <p class="step-desc">تطبيق ما تعلّمه الطالب من خلال تمارين حية وتفاعلية</p>
+    </div>
+    <div class="method-step reveal">
+      <div class="step-number">٤</div>
+      <h3 class="step-title">المراجعة والإتقان</h3>
+      <p class="step-desc">مراجعة دورية منظّمة تضمن الثبات والترسيخ العلمي</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-light" id="testimonials">
+  <div class="section-header reveal">
+    <span class="section-label">Student Reviews</span>
+    <h2 class="section-title">ماذا قال الطلاب؟</h2>
+    <p class="section-subtitle">شهادات حقيقية من متعلمين استفادوا من المنهج الأصيل</p>
+    <div class="ornament">✦</div>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <span class="stars">★★★★★</span>
+      <p class="testimonial-text">أستاذ عبد المجيد نِعْمَ المعلّم والمرشد. أسلوبه في تعليم القرآن أثّر فيّ تأثيرًا بالغًا، وأشعر بكل درس أنني أقترب من الله أكثر.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">أ</div>
+        <div>
+          <div class="author-name">أحمد يوسف</div>
+          <div class="author-role">طالب تحفيظ قرآن</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="stars">★★★★★</span>
+      <p class="testimonial-text">كنت أجد صعوبة في النحو لسنوات، لكن بطريقة الأستاذ عبد المجيد المبسّطة أصبح النحو أمرًا ممتعًا وواضحًا لي.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">ف</div>
+        <div>
+          <div class="author-name">فاطمة إبراهيم</div>
+          <div class="author-role">متعلمة لغة عربية</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="stars">★★★★★</span>
+      <p class="testimonial-text">درست الفقه والتاريخ الإسلامي على يديه وأشهد بعلمه الغزير وصبره الكبير. تعلّمت منه العلم والأخلاق معًا.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">م</div>
+        <div>
+          <div class="author-name">محمود حسن</div>
+          <div class="author-role">طالب فقه وتاريخ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <p class="cta-ayah">﴿ يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَٰتٍ ﴾</p>
+    <span class="cta-ref">— Surah Al-Mujadilah 58:11</span>
+    <h2 class="cta-title">ابدأ مسيرتك العلمية اليوم</h2>
+    <p class="cta-text">
+      تواصل معنا عبر واتساب للاستفسار عن الجداول الدراسية والمستويات المتاحة. نرحّب بالطلاب من جميع الأعمار والخلفيات.
+    </p>
+    <div class="cta-channels">
+      <a href="https://wa.me/message" class="channel-btn whatsapp-btn" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        تواصل عبر واتساب
+      </a>
+      <a href="mailto:contact@abdulmajid.edu" class="channel-btn email-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        راسلنا بالبريد
+      </a>
+    </div>
+    <p style="font-size:0.8rem; color: rgba(255,255,255,0.3); direction:ltr; font-family:'Cinzel', serif; letter-spacing:0.06em;">
+      Sessions available online & in-person · Arabic · English
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">الأستاذ عبد المجيد محمد جامع</div>
+  <div class="footer-motto">"Learning with Sincerity, Living with Guidance."</div>
+  <div class="footer-copy">© 2025 · Islamic & Arabic Education</div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, (entry.target.dataset.delay || 0) * 1);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach((el, i) => {
+    el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
