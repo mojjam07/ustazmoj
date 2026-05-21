@@ -20,8 +20,10 @@ export function HeroSection({
       <div className="hero-content">
         <span className="hero-bismillah">{strings.hero.bismillah}</span>
         <span className="hero-eyebrow">{strings.hero.eyebrow}</span>
-        <h1 className="hero-name">{strings.hero.nameAr}</h1>
-        <p className="hero-name-en">{strings.hero.nameEn}</p>
+        <h1 className="hero-name">{lang === 'ar' ? strings.hero.nameAr : strings.hero.nameEn}</h1>
+        <p className="hero-name-en" style={{ display: lang === 'ar' ? 'none' : 'block' }}>
+          {strings.hero.nameEn}
+        </p>
         <div className="hero-divider" />
         <p className="hero-bio">{strings.hero.bio}</p>
         <p className="hero-motto">{strings.hero.motto}</p>

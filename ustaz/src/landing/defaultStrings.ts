@@ -12,7 +12,7 @@ export const defaultStrings: LandingStrings = {
     bismillah: 'Bismillah ar-Rahman ar-Rahim',
     eyebrow: 'Islamic & Arabic Education',
     nameAr: "Ustaz Abdul Mojeed Jami'",
-    nameEn: "Abdul Mojeed Jami'",
+    nameEn: "Ustaz Abdul Mojeed Jami'",
     bio: 'Learn Qur’an, tajwīd, hadith, and fiqh with a structured plan. Sessions are designed for clarity, consistency, and lasting understanding.',
     motto: '"Learning with Sincerity, Living with Guidance."',
     btnPrimary: 'Request a Lesson',
@@ -112,7 +112,7 @@ export const defaultStrings: LandingStrings = {
     items: [
       {
         stars: '★★★★★',
-        text: 'Abdul Majid\'s teaching is clear, structured, and very helpful. I improved my Qur\'an recitation and understanding significantly.',
+        text: 'Ustaz Abdul Mojeed\'s teaching is clear, structured, and very helpful. I improved my Qur\'an recitation and understanding significantly.',
         name: 'Ahmed Yousif',
         role: 'Qur\'an Memorization Learner'
       },
