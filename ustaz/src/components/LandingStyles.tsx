@@ -100,10 +100,10 @@ export function LandingStyles() {
       .hero-content { padding: 5rem 3rem 5rem 2rem; color: var(--white); position: relative; z-index: 2; }
       .hero-bismillah { font-family: 'Amiri', serif; font-size: 1.4rem; color: var(--gold-light); margin-bottom: 1.8rem; opacity: 0.9; display: block; }
       .hero-eyebrow { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-family: 'Cinzel', serif; }
-      .hero-name { font-family: 'Amiri', serif; font-size: 3.2rem; line-height: 1.2; color: var(--white); margin-bottom: 0.6rem; font-weight: 700; }
+      .hero-name { font-family: 'Amiri', serif; font-size: 3.2rem; line-height: 1.2; color: var(--green-soft); margin-bottom: 0.6rem; font-weight: 700; }
       .hero-name-en { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 1.5rem; font-weight: 400; letter-spacing: 0.08em; direction: ltr; text-align: right; }
       .hero-divider { width: 80px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin: 1.5rem 0; }
-      .hero-bio { font-size: 1.05rem; line-height: 1.85; color: rgba(255,255,255,0.82); max-width: 420px; margin-bottom: 2rem; }
+      .hero-bio { font-size: 1.05rem; line-height: 1.85; color: var(--green-soft); max-width: 420px; margin-bottom: 2rem; }
       .hero-motto { font-family: 'Amiri', serif; font-style: italic; font-size: 1.1rem; color: var(--gold-pale); margin-bottom: 2.5rem; padding-right: 1rem; border-right: 3px solid var(--gold); direction: ltr; text-align: right; }
       .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
       .btn-primary { background: var(--gold); color: var(--green-deep); border: none; padding: 0.85rem 2rem; font-family: 'Noto Naskh Arabic', serif; font-size: 1rem; font-weight: 700; cursor: pointer; border-radius: 3px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s, transform 0.15s; }
