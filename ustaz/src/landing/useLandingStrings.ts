@@ -15,10 +15,12 @@ export function useLandingStrings(): {
 
     async function load() {
       try {
-        const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() || ''
-        const url = apiBaseUrl
-          ? `${apiBaseUrl.replace(/\/$/, '')}/api/landing?lang=${lang}`
-          : `/api/landing?lang=${lang}`
+        const apiBaseUrl =
+          (import.meta.env.VITE_API_URL as string | undefined)?.trim() ||
+          (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() ||
+          ''
+
+        const url = `${apiBaseUrl.replace(/\/$/, '')}/landing?lang=${lang}`
 
         const res = await fetch(url)
 
