@@ -7,8 +7,15 @@ export function useLandingStrings(): {
   lang: Language
   setLang: (l: Language) => void
 } {
-  const [lang, setLang] = useState<Language>('en')
+  const getInitialLang = (): Language => {
+    if (typeof window === 'undefined') return 'en'
+    const saved = window.localStorage.getItem('ustaz.lang')
+    return (saved === 'en' || saved === 'ar') ? saved : 'en'
+  }
+
+  const [lang, setLang] = useState<Language>(getInitialLang)
   const [strings, setStrings] = useState<LandingStrings>(defaultStrings)
+
 
   useEffect(() => {
     let cancelled = false
@@ -35,6 +42,14 @@ export function useLandingStrings(): {
     load()
     return () => {
       cancelled = true
+    }
+  }, [lang])
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem('ustaz.lang', lang)
+    } catch {
+      // ignore
     }
   }, [lang])
 

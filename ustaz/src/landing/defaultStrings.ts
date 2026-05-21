@@ -11,16 +11,16 @@ export const defaultStrings: LandingStrings = {
   hero: {
     bismillah: 'Bismillah ar-Rahman ar-Rahim',
     eyebrow: 'Islamic & Arabic Education',
-    nameAr: "Abdul Majid Muhammad Jami'",
-    nameEn: "Abdul Majid Muhammad Jami'",
+    nameAr: "Ustaz Abdul Mojeed Jami'",
+    nameEn: "Abdul Mojeed Jami'",
     bio: 'Learn Qur’an, tajwīd, hadith, and fiqh with a structured plan. Sessions are designed for clarity, consistency, and lasting understanding.',
     motto: '"Learning with Sincerity, Living with Guidance."',
     btnPrimary: 'Request a Lesson',
     btnSecondary: 'Explore Subjects',
 
-    avatarName: "Abdul Majid Muhammad Jami'",
+    avatarName: "Ustaz Abdul Mojeed Jami'",
     avatarTitle: 'Qur\'an & Islamic Studies Instructor',
-    uploadNote: '[ Educator Photo Placeholder ]',
+    uploadNote: '[ Educator ]',
     badges: ['Qur\'an', 'Hadith & Fiqh', 'Arabic Grammar']
   },
   subjects: {
@@ -62,7 +62,7 @@ export const defaultStrings: LandingStrings = {
   },
   about: {
     label: 'About the Educator',
-    title: 'Who is Abdul Majid?',
+    title: 'Who is Ustaz Abdul Mojeed?',
     paragraphs: [
       'I teach Qur\'an and Islamic studies with a focus on clarity and practical understanding.',
       'My goal is to support students in building knowledge step-by-step, with sincerity and consistency'
@@ -140,7 +140,7 @@ export const defaultStrings: LandingStrings = {
     availability: 'Sessions available online & in-person · Arabic & English'
   },
   footer: {
-    name: "Abdul Majid Muhammad Jami'",
+    name: "Ustaz Abdul Mojeed Jami'",
     motto: '"Learning with Sincerity, Living with Guidance."',
     copy: '© 2025 · Islamic & Arabic Education'
   }

@@ -16,6 +16,15 @@ import { useEffect, useRef, useState } from 'react'
 
 function LandingPage() {
   const { strings, lang, setLang } = useLandingStrings()
+
+  // Keep html attributes in sync on initial mount + whenever lang changes.
+  useEffect(() => {
+    const dir = lang === 'ar' ? 'rtl' : 'ltr'
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('dir', dir)
+      document.documentElement.setAttribute('lang', lang)
+    }
+  }, [lang])
   useScrollReveal()
 
   const [isLangTransitioning, setIsLangTransitioning] = useState(false)
