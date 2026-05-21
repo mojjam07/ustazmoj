@@ -15,7 +15,13 @@ export function useLandingStrings(): {
 
     async function load() {
       try {
-        const res = await fetch(`/api/landing?lang=${lang}`)
+        const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() || ''
+        const url = apiBaseUrl
+          ? `${apiBaseUrl.replace(/\/$/, '')}/api/landing?lang=${lang}`
+          : `/api/landing?lang=${lang}`
+
+        const res = await fetch(url)
+
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const json = await res.json()
         if (!cancelled && json?.strings) setStrings(json.strings as LandingStrings)
