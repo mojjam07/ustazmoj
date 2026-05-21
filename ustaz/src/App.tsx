@@ -1,6 +1,7 @@
 import './App.css'
 import { useLandingStrings } from './landing/useLandingStrings'
 import { useScrollReveal } from './landing/useScrollReveal'
+
 import { LandingStyles } from './components/LandingStyles'
 // import { PatternBg } from './components/PatternBg'
 import { NavBar } from './components/NavBar'
@@ -25,7 +26,8 @@ function LandingPage() {
       document.documentElement.setAttribute('lang', lang)
     }
   }, [lang])
-  useScrollReveal()
+  useScrollReveal([lang, strings])
+
 
   const [isLangTransitioning, setIsLangTransitioning] = useState(false)
   const pendingDirRef = useRef<'ltr' | 'rtl'>('ltr')
